@@ -17,10 +17,14 @@ public class Main {
             Scanner scanner3=new Scanner(System.in);
             int rezultat =scanner.nextInt();
 
-            double suma;
-            suma=(styl*0.2)+(efekty*0.3)+(rezultat*0.5);
-        System.out.println("Suma wszystkich not wynosi "+suma+". Gratulacje!");
+            if ((styl<0||styl>10)||(efekty<0||efekty>10)||(rezultat<0||rezultat>10))
+                System.out.println("Niepoprawna wartość dla jednej z not.");
+            else {
 
+                double suma;
+                suma = (styl * 0.2) + (efekty * 0.3) + (rezultat * 0.5);
+                System.out.println("Suma wszystkich not wynosi " + suma + ". Gratulacje!");
+            }
 
 
 
